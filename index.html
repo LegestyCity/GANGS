@@ -5,33 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>العصابات - LegestyCity</title>
 
-<meta name="theme-color" content="#7a0c0c">
+<meta name="theme-color" content="#111">
 
 <style>
 :root{
-  --red-dark:#7a0c0c;
-  --red:#b11212;
-  --red-light:#e53935;
   --black:#111;
-  --gray:#f4f4f4;
-  --text:#222;
+  --gray-dark:#1b1b1b;
+  --gray:#333;
+  --gray-light:#555;
+  --white:#fff;
+  --text:#eee;
 }
 
 /* reset */
 *{margin:0;padding:0;box-sizing:border-box}
 body{
   font-family: "Segoe UI", Tahoma, sans-serif;
-  background: linear-gradient(135deg,var(--red-dark),var(--red));
+  background: linear-gradient(135deg,var(--black),var(--gray-dark));
   color:var(--text);
 }
 
 /* ===== HEADER ===== */
 header{
-  background:#fff;
+  background:var(--gray-dark);
   position:sticky;
   top:0;
   z-index:100;
-  box-shadow:0 4px 15px rgba(0,0,0,.15)
+  box-shadow:0 4px 15px rgba(0,0,0,.3)
 }
 .header-content{
   max-width:1200px;
@@ -44,20 +44,20 @@ header{
 .logo{
   width:55px;height:55px;
   border-radius:14px;
-  background:linear-gradient(135deg,var(--red),var(--red-light));
+  background:linear-gradient(135deg,var(--gray),var(--gray-dark));
   display:flex;align-items:center;justify-content:center;
-  box-shadow:0 5px 15px rgba(0,0,0,.3)
+  box-shadow:0 5px 15px rgba(0,0,0,.5)
 }
-.logo svg{width:30px;height:30px;fill:#fff}
+.logo svg{width:30px;height:30px;fill:var(--white)}
 
 .title-section h1{font-size:22px}
-.title-section p{font-size:13px;color:#666}
+.title-section p{font-size:13px;color:var(--gray-light)}
 
 /* menu button */
 .menu-toggle{cursor:pointer}
 .menu-toggle span{
   display:block;width:28px;height:3px;
-  background:var(--red);
+  background:var(--white);
   margin:5px 0;border-radius:3px
 }
 
@@ -66,27 +66,27 @@ header{
   position:fixed;
   top:0;right:-320px;
   width:300px;height:100vh;
-  background:#fff;
+  background:var(--gray-dark);
   padding:80px 25px;
   transition:.4s;
-  box-shadow:-5px 0 20px rgba(0,0,0,.2);
+  box-shadow:-5px 0 20px rgba(0,0,0,.5);
   z-index:1000
 }
 .nav-menu.active{right:0}
 .nav-menu a{
   display:block;
   padding:15px 0;
-  color:#111;
+  color:var(--text);
   font-size:18px;
   text-decoration:none;
-  border-bottom:1px solid #eee
+  border-bottom:1px solid var(--gray)
 }
-.nav-menu a:hover{color:var(--red)}
+.nav-menu a:hover{color:var(--gray-light)}
 .close-menu{
   position:absolute;
   top:20px;left:20px;
   font-size:32px;
-  cursor:pointer;color:var(--red)
+  cursor:pointer;color:var(--text)
 }
 
 /* overlay */
@@ -106,16 +106,16 @@ header{
   padding:40px 20px
 }
 .section{
-  background:#fff;
+  background:var(--gray-dark);
   border-radius:18px;
   padding:30px;
   margin-bottom:35px;
-  box-shadow:0 10px 30px rgba(0,0,0,.15)
+  box-shadow:0 10px 30px rgba(0,0,0,.5)
 }
 .section h2{
-  color:var(--red);
+  color:var(--text);
   margin-bottom:25px;
-  border-right:5px solid var(--red);
+  border-right:5px solid var(--gray);
   padding-right:15px
 }
 
@@ -130,21 +130,22 @@ header{
   border-radius:16px;
   padding:25px;
   text-align:center;
-  transition:.3s
+  transition:.3s;
+  will-change: transform, box-shadow;
 }
 .stat-card:hover{
   transform:translateY(-6px);
-  box-shadow:0 12px 25px rgba(0,0,0,.2)
+  box-shadow:0 12px 25px rgba(0,0,0,.7)
 }
 .stat-icon{
   width:60px;height:60px;
   margin:auto auto 15px;
   border-radius:50%;
-  background:linear-gradient(135deg,var(--red),var(--red-light));
+  background:var(--gray-dark);
   display:flex;align-items:center;justify-content:center
 }
-.stat-icon svg{width:28px;height:28px;fill:#fff}
-.stat-card h3{font-size:38px;color:#111}
+.stat-icon svg{width:28px;height:28px;fill:var(--white)}
+.stat-card h3{font-size:38px;color:var(--white)}
 .stat-card p{font-weight:bold}
 
 /* ===== OFFICIALS ===== */
@@ -154,42 +155,43 @@ header{
   gap:25px
 }
 .official-card{
-  background:#1b1b1b;
-  color:#fff;
+  background:var(--black);
+  color:var(--text);
   border-radius:16px;
   padding:20px;
   text-align:center;
-  transition:.3s
+  transition:.3s;
+  will-change: transform, box-shadow;
 }
 .official-card:hover{
   transform:translateY(-6px);
-  box-shadow:0 12px 30px rgba(0,0,0,.4)
+  box-shadow:0 12px 30px rgba(0,0,0,.7)
 }
 .official-img{
   width:110px;height:110px;
   margin:auto auto 15px;
   border-radius:50%;
-  background:linear-gradient(135deg,var(--red),#ff5252);
+  background:var(--gray);
   display:flex;align-items:center;justify-content:center
 }
-.official-img svg{width:50px;height:50px;fill:#fff}
-.official-card p{color:#ddd}
+.official-img svg{width:50px;height:50px;fill:var(--white)}
+.official-card p{color:var(--gray-light)}
 
 /* ===== APPLY ===== */
 .apply-btn{
   display:inline-block;
   padding:18px 55px;
   border-radius:50px;
-  background:linear-gradient(135deg,var(--red),var(--red-light));
+  background:var(--gray-dark);
   color:#fff;
   font-size:20px;
   text-decoration:none;
-  box-shadow:0 10px 25px rgba(0,0,0,.3);
+  box-shadow:0 10px 25px rgba(0,0,0,.5);
   transition:.3s
 }
 .apply-btn:hover{
   transform:scale(1.05);
-  box-shadow:0 15px 35px rgba(0,0,0,.5)
+  box-shadow:0 15px 35px rgba(0,0,0,.7)
 }
 
 /* footer */
@@ -215,7 +217,6 @@ footer{
   <div class="header-content">
     <div style="display:flex;gap:15px;align-items:center">
       <div class="logo">
-        <!-- أيقونة جديدة (Shield) -->
         <svg viewBox="0 0 24 24">
           <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/>
         </svg>
@@ -225,14 +226,14 @@ footer{
         <p>إدارة وتنظيم العصابات</p>
       </div>
     </div>
-    <div class="menu-toggle" id="menuToggle">
+    <div class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
       <span></span><span></span><span></span>
     </div>
   </div>
 </header>
 
 <nav class="nav-menu" id="navMenu">
-  <span class="close-menu" id="closeMenu">×</span>
+  <span class="close-menu" id="closeMenu" aria-label="إغلاق القائمة">×</span>
   <a href="#stats">الإحصائيات</a>
   <a href="#officials">المسؤولين</a>
   <a href="#about">عن العصابات</a>
@@ -246,7 +247,6 @@ footer{
 <div class="stats-grid">
   <div class="stat-card">
     <div class="stat-icon">
-      <!-- users icon -->
       <svg viewBox="0 0 24 24">
         <path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zM8 11c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5C15 14.17 10.33 13 8 13zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
       </svg>
@@ -257,7 +257,6 @@ footer{
 
   <div class="stat-card">
     <div class="stat-icon">
-      <!-- star icon -->
       <svg viewBox="0 0 24 24">
         <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
       </svg>
@@ -270,6 +269,7 @@ footer{
 
 <section class="section" id="officials">
 <h2>المسؤولين</h2>
+<div class="officials-grid">
   <div class="official-card">
     <div class="official-img">
       <svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
@@ -285,22 +285,25 @@ footer{
     <h3>LC | eyas_99999</h3>
     <p>Deputy Manager</p>
   </div>
-  
-   <div class="official-card">
+
+  <div class="official-card">
     <div class="official-img">
       <svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
     </div>
     <h3>LC | vg_c77 - عروج</h3>
-    <p> مسوؤل التنظيم </p>
+    <p>مسوؤل التنظيم</p>
+  </div>
 </div>
 </section>
 
 <section class="section" id="apply">
 <h2>التقديم</h2>
-<p style="margin-bottom:25px;color:#555;font-size:18px">
+<p style="margin-bottom:25px;color:#ccc;font-size:18px">
 للانضمام، افتح تذكرة في الديسكورد واطلب نموذج العصابات
 </p>
-<a class="apply-btn" href="https://discord.com/channels/1352650776865931294/1422302691681370165" target="_blank">قدّم عندما يفتح التقديم</a>
+<a class="apply-btn" href="https://discord.com/channels/1352650776865931294/1422302691681370165" target="_blank" rel="noopener noreferrer">
+قدّم عندما يفتح التقديم
+</a>
 </section>
 
 </div>
@@ -311,23 +314,28 @@ footer{
 </footer>
 
 <script>
-const menuToggle=document.getElementById("menuToggle");
-const navMenu=document.getElementById("navMenu");
-const closeMenu=document.getElementById("closeMenu");
-const overlay=document.getElementById("overlay");
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+const closeMenu = document.getElementById("closeMenu");
+const overlay = document.getElementById("overlay");
 
-menuToggle.onclick=()=>{navMenu.classList.add("active");overlay.classList.add("active")}
-closeMenu.onclick=close;
-overlay.onclick=close;
-
-function close(){
+function closeMenuFunc(){
   navMenu.classList.remove("active");
   overlay.classList.remove("active");
 }
+
+menuToggle.onclick = () => {
+  navMenu.classList.add("active");
+  overlay.classList.add("active");
+}
+closeMenu.onclick = closeMenuFunc;
+overlay.onclick = closeMenuFunc;
+
+// أغلق القائمة عند الضغط على أي رابط
+document.querySelectorAll('.nav-menu a').forEach(link => {
+  link.onclick = closeMenuFunc;
+});
 </script>
 
 </body>
-
 </html>
-
-
